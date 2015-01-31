@@ -34,7 +34,7 @@
           <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-compiler-plugin</artifactId>
-              <version>3.1</version>
+              <version>3.2</version>
               <configuration>
                   <source>1.5</source>
                   <target>1.5</target>
@@ -47,7 +47,7 @@
                        <profile>
                          <id>compiler</id>
                            <properties>
-                             <JAVA_1_5_HOME>/System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home</JAVA_1_5_HOME>
+                             <JAVA_1_5_HOME>/System/Library/Frameworks/JavaVM.framework/Versions/1.5.0_30/Home</JAVA_1_5_HOME>
                              <JAVA_1_5_BOOTCLASSPATH>/System/Library/Frameworks/JavaVM.framework/Versions/1.5.0_30/Classes/classes.jar</JAVA_1_5_BOOTCLASSPATH>
                            </properties>
                        </profile> 
