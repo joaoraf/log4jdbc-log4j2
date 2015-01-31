@@ -93,8 +93,12 @@ public class DefaultResultSetCollector implements ResultSetCollector {
   private List<List<Object>> rows;
   private Map<String, Integer> colNameToColIndex;
   private int colIndex; 
-  private static final List<String> GETTERS = Arrays.asList(new String[] { "getString", "getLong", "getInt", "getDate", "getTimestamp", "getTime",
-      "getBigDecimal", "getFloat", "getDouble", "getByte", "getShort", "getObject", "getBoolean", });
+  private static final List<String> GETTERS = Arrays.asList(new String[] {"getArray", 
+          "getAsciiStream", "getBigDecimal", "getBinaryStream", "getBlob", "getBoolean", 
+          "getByte", "getBytes", "getCharacterStream", "getClob", "getDate", "getDouble", 
+          "getFloat", "getInt", "getLong", "getNCharacterStream", "getNClob", "getNString", 
+          "getObject", "getRef", "getRowId", "getShort", "getSQLXML", "getString",  
+          "getTime", "getTimestamp", "getUnicodeStream", "getURL"});
 
   public List<List<Object>> getRows() {
     return rows;
