@@ -93,8 +93,14 @@ public class DefaultResultSetCollector implements ResultSetCollector {
   private List<List<Object>> rows;
   private Map<String, Integer> colNameToColIndex;
   private int colIndex; 
-  private static final List<String> GETTERS = Arrays.asList(new String[] { "getString", "getLong", "getInt", "getDate", "getTimestamp", "getTime",
-      "getBigDecimal", "getFloat", "getDouble", "getByte", "getShort", "getObject", "getBoolean", });
+  private static final List<String> GETTERS = Arrays.asList(new String[] {"getArray", 
+          "getAsciiStream", "getBigDecimal", "getBinaryStream", "getBlob", "getBoolean", 
+          "getByte", "getBytes", "getCharacterStream", "getClob", "getDate", "getDouble", 
+          "getFloat", "getInt", "getLong", 
+          /* does not exist in JDBC 3: "getNCharacterStream", "getNClob", "getNString", */
+          "getObject", "getRef", /* does not exist in JDBC 3: "getRowId", */ "getShort", 
+          /* does not exist in JDBC 3: "getSQLXML",*/ "getString",  
+          "getTime", "getTimestamp", "getUnicodeStream", "getURL"});
 
   public List<List<Object>> getRows() {
     return rows;
