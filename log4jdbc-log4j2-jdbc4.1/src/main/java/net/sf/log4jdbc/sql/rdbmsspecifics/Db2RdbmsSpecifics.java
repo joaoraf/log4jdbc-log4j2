@@ -25,8 +25,7 @@ import java.util.Date;
  */
 public class Db2RdbmsSpecifics extends RdbmsSpecifics {
 
-	private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat(
-			"'TIMESTAMP('''yyyy-MM-dd HH:mm:ss.SSS''')'");
+	private static final String DATE_FORMAT = "'TIMESTAMP('''yyyy-MM-dd HH:mm:ss.SSS''')'";
 
 	public Db2RdbmsSpecifics() {
 		super();
@@ -35,7 +34,7 @@ public class Db2RdbmsSpecifics extends RdbmsSpecifics {
 	@Override
 	public String formatParameterObject(Object object) {
 		if (object instanceof Date) {
-			return DATE_FORMAT.format((Date) object);
+			return new SimpleDateFormat(DATE_FORMAT).format((Date) object);
 		} 
 		return super.formatParameterObject(object);
 	}
