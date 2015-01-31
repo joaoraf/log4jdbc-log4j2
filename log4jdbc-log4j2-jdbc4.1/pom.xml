@@ -21,7 +21,7 @@
           <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-compiler-plugin</artifactId>
-              <version>3.1</version>
+              <version>3.2</version>
               <configuration>
                   <!-- 
                   Here we assume that the default JDK version on the machine compiling the project 
@@ -30,6 +30,27 @@
                   -->
                   <source>1.7</source>
                   <target>1.7</target>
+                  <compilerVersion>1.7</compilerVersion>
+                  <fork>true</fork>
+                  <!-- 
+                  You need to set up the path to a JDK 1.7 in the Maven settings.xml file, 
+                  as explained here: https://maven.apache.org/plugins/maven-compiler-plugin/examples/compile-using-different-jdk.html
+                  For instance: 
+                       <profile>
+                         <id>compiler</id>
+                           <properties>
+                             <JAVA_1_7_HOME>/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home</JAVA_1_7_HOME>
+                             <JAVA_1_7_BOOTCLASSPATH>/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/lib/*.jar</JAVA_1_7_BOOTCLASSPATH>
+                           </properties>
+                       </profile> 
+                       [...]
+                       <activeProfiles>
+                         <activeProfile>compiler</activeProfile>
+                       </activeProfiles>
+                   -->
+                  <executable>${JAVA_1_7_HOME}/bin/javac</executable>
+                  <bootclasspath>${JAVA_1_7_BOOTCLASSPATH}</bootclasspath>
+                  <verbose>true</verbose>
               </configuration>
           </plugin>
       </plugins>
