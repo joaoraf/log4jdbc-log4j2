@@ -166,6 +166,9 @@ public class DriverSpy implements Driver
 			subDrivers.add("oracle.jdbc.OracleDriver");
 			subDrivers.add("com.sybase.jdbc2.jdbc.SybDriver");
 			subDrivers.add("net.sourceforge.jtds.jdbc.Driver");
+			subDrivers.add("com.ibm.db2.jcc.DB2Driver");
+        		subDrivers.add("COM.ibm.db2.jdbc.app.DB2Driver");
+       		        subDrivers.add("COM.ibm.db2.jdbc.net.DB2Driver");
 
 			// MS driver for Sql Server 2000
 			subDrivers.add("com.microsoft.jdbc.sqlserver.SQLServerDriver");
